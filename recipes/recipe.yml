@@ -93,7 +93,6 @@ modules:
         - com.github.rafostar.Clapper.Enhancers
         - com.github.tchx84.Flatseal
         - com.github.zocker_160.SyncThingy
-        - com.hypixel.HytaleLauncher
         - com.moonlight_stream.Moonlight
         - com.nextcloud.desktopclient.nextcloud
         - com.play0ad.zeroad
