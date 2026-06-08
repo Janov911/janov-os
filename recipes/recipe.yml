@@ -166,7 +166,6 @@ modules:
         - org.gnome.Loupe
         - org.gnome.Papers
         - org.gnome.World.Iotas
-        - 0rg.gnome.gitlab.somas.Apostrophe
         - org.kde.ghostwriter
         - org.kde.kdenlive
         - org.libreoffice.LibreOffice
