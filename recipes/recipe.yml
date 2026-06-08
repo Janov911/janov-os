@@ -89,105 +89,42 @@ modules:
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
-        - app.drey.Warp
-        - app.xemu.xemu
         - app.zen_browser.zen
-        - ca.desrt.dconf-editor
-        - cafe.avery.Delfin
-        - com.bitwarden.desktop
-        - com.boxy_svg.BoxySVG
-        - com.calibre_ebook.calibre
-        - com.discordapp.Discord
-        - com.dosbox_x.DOSBox-X
-        - com.feaneron.Boatswain
-        - com.github.Matoking.protontricks
-        - com.github.babluboy.bookworm
-        - com.github.finefindus.eyedropper
-        - com.github.iwalton3.jellyfin-media-player
+        - com.github.rafostar.Clapper.Enhancers
         - com.github.tchx84.Flatseal
         - com.github.zocker_160.SyncThingy
-        - com.heroicgameslauncher.hgl
-        - com.mattjakeman.ExtensionManager
+        - com.hypixel.HytaleLauncher
         - com.moonlight_stream.Moonlight
+        - com.nextcloud.desktopclient.nextcloud
         - com.play0ad.zeroad
-        - com.rafaelmardojai.Blanket
-        - com.ranfdev.Notify
+        - com.protonvpn.www
         - com.shatteredpixel.shatteredpixeldungeon
-        - com.super_productivity.SuperProductivity
         - com.thincast.client
-        - com.transmissionbt.Transmission
-        - com.usebottles.bottles
         - com.valvesoftware.SteamLink
-        - com.vscodium.codium
-        - com.vysp3r.ProtonPlus
-        - com.zettlr.Zettlr
-        - de.haeckerfelix.Shortwave
-        - de.leopoldluley.Clapgrep
-        - dev.edfloreshz.Tasks
         - dev.geopjr.Tuba
-        - dev.qwery.AddWater
+        - dev.ibrahimcetin.reins
         - eu.betterbird.Betterbird
-        - fr.romainvigier.MetadataCleaner
         - im.riot.Riot
-        - info.beyondallreason.bar
-        - info.cemu.Cemu
-        - io.freetubeapp.FreeTube
-        - io.github.amit9838.mousam
-        - io.github.dosbox-staging
-        - io.github.dvlv.boxbuddyrs
-        - io.github.dweymouth.supersonic
         - io.github.fastrizwaan.WineZGUI
-        - io.github.flattool.Warehouse
         - io.github.fsobolev.TimeSwitch
         - io.github.giantpinkrobots.flatsweep
-        - io.github.input_leap.input-leap
         - io.github.lo2dev.Echo
-        - io.github.nokse22.Exhibit
         - io.github.vikdevelop.SaveDesktop
-        - io.missioncenter.MissionCenter
+        - io.gitlab.news_flash.NewsFlash
         - io.mrarm.mcpelauncher
-        - io.vikunja.Vikunja
         - it.mijorus.collector
         - it.mijorus.gearlever
-        - net.cozic.joplin_desktop
         - net.davidotek.pupgui2
         - net.lutris.Lutris
         - net.newpipe.NewPipe
         - net.openra.OpenRA
         - net.retrodeck.retrodeck
-        - net.sf.VICE
-        - net.veloren.airshipper
-        - org.DolphinEmu.dolphin-emu
-        - org.cryptomator.Cryptomator
-        - org.gimp.GIMP
         - org.gnome.Boxes
         - org.gnome.DejaDup
-        - org.gnome.Evince
-        - org.gnome.Loupe
-        - org.gnome.Papers
-        - org.gnome.World.Iotas
-        - org.kde.ghostwriter
         - org.kde.kdenlive
-        - org.libreoffice.LibreOffice
-        - org.libretro.RetroArch
-        - org.localsend.localsend_app
         - org.nickvision.tubeconverter
-        - org.openttd.OpenTTD
-        - org.prismlauncher.PrismLauncher
-        - org.qbittorrent.qBittorrent
-        - org.qownnotes.QOwnNotes
-        - org.remmina.Remmina
-        - org.scummvm.ScummVM
-        - org.signal.Signal
-        - org.torproject.torbrowser-launcher
-        - org.videolan.VLC
-        - org.virt_manager.virt-manager
-        - org.wesnoth.Wesnoth
-        - org.wezfurlong.wezterm
-        - org.widelands.Widelands
-        - org.x.Warpinator
-        - page.tesk.Refine
-        - sh.cider.Cider        
+        - org.winehq.Wine.gecko
+        - org.winehq.Wine.mono        
      # - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
