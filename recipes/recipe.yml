@@ -88,7 +88,6 @@ modules:
       - notify: true # Send notification after install/uninstall is finished (true/false)
         scope: system
         # If no repo information is specified, Flathub will be used by default
-<<<<<<< Updated upstream
         user:
           install: # system flatpaks we want all users to have and not remove
           - app.zen_browser.zen
@@ -126,48 +125,6 @@ modules:
           - org.nickvision.tubeconverter
           - org.winehq.Wine.gecko
           - org.winehq.Wine.mono        
-=======
-        install: # system flatpaks we want all users to have and not remove
-        - app.zen_browser.zen
-        - com.github.rafostar.Clapper.Enhancers
-        - com.github.tchx84.Flatseal
-        - com.github.zocker_160.SyncThingy
-        - com.moonlight_stream.Moonlight
-        - com.nextcloud.desktopclient.nextcloud
-        - com.play0ad.zeroad
-        - com.protonvpn.www
-        - com.shatteredpixel.shatteredpixeldungeon
-        - com.thincast.client
-        - com.valvesoftware.SteamLink
-        - dev.geopjr.Tuba
-        - dev.ibrahimcetin.reins
-        - eu.betterbird.Betterbird
-        - im.riot.Riot
-        - io.github.fastrizwaan.WineZGUI
-        - io.github.fsobolev.TimeSwitch
-        - io.github.giantpinkrobots.flatsweep
-        - io.github.lo2dev.Echo
-        - io.github.vikdevelop.SaveDesktop
-        - io.gitlab.news_flash.NewsFlash
-        - io.mrarm.mcpelauncher
-        - it.mijorus.collector
-        - it.mijorus.gearlever
-        - net.davidotek.pupgui2
-        - net.lutris.Lutris
-        - net.newpipe.NewPipe
-        - net.openra.OpenRA
-        - net.retrodeck.retrodeck
-        - org.gnome.Boxes
-        - org.gnome.DejaDup
-        - org.kde.kdenlive
-        - org.nickvision.tubeconverter
-        - org.winehq.Wine.gecko
-        - org.winehq.Wine.mono        
-        - io.github.vikdevelop.SaveDesktop
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
      # - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
