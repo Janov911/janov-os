@@ -164,6 +164,9 @@ modules:
         - org.winehq.Wine.gecko
         - org.winehq.Wine.mono        
         - io.github.vikdevelop.SaveDesktop
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
      # - scope: user # Also add Flathub user repo, but no user packages
 
