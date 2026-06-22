@@ -129,8 +129,24 @@ modules:
 
   - type: gnome-extensions
     install:
-      - appindicatorsupport
-      - auto-move-windows
-      - Bluetooth-Battery-Meter
+      - Bluetooth-Battery-Meter@maniacx.github.com
+      - appindicatorsupport@rgcjonas.gmail.com
+      - auto-move-windows@gnome-shell-extensions.gcampax.github.com
+      - bluetooth-quick-connect@bjarosze.gmail.com
+      - blur-my-shell@aunetx
+      - caffeine@patapon.info
+#dash-to-dock@micxgx.gmail.com
+#gsconnect@andyholmes.github.io
+#hotedge@jonathan.jdoda.ca
+#just-perfection-desktop@just-perfection
+#logomenu@aryan_k
+#space-bar@luchrioh
+#switcher@landau.fi
+#tactile@lundal.io
+#tailscale-status@maxgallup.github.com
+      - tilingshell@ferrarodomenico.com
+#top-bar-organizer@julian.gse.jsts.xyz
+#useless-gaps@pimsnel.com
+#hdxosk@citrix.comluetooth-Battery-Meter
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
