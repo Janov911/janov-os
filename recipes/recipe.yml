@@ -87,15 +87,15 @@ modules:
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
         scope: system
+        repo:
+          title: Flathub (system)
         # If no repo information is specified, Flathub will be used by default
-        user:
-          install: # system flatpaks we want all users to have and not remove
+        install: # system flatpaks we want all users to have and not remove
           - app.zen_browser.zen
           - com.github.rafostar.Clapper.Enhancers
           - com.github.tchx84.Flatseal
           - com.github.zocker_160.SyncThingy
           - com.moonlight_stream.Moonlight
-          - com.nextcloud.desktopclient.nextcloud
           - com.play0ad.zeroad
           - com.protonvpn.www
           - com.shatteredpixel.shatteredpixeldungeon
