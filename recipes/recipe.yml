@@ -86,10 +86,10 @@ modules:
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
-        scope: system
+        scope: user
         repo:
           name: flathub
-          title: Flathub (System)
+          title: Flathub (User)
           url: https://dl.flathub.org/repo/flathub.flatpakreporepo:
         install: # system flatpaks we want all users to have and not remove
           - app.zen_browser.zen
