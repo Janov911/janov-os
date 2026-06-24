@@ -159,7 +159,7 @@ modules:
       - Tailscale Status
       - Tiling Shell
       - Top Bar Organizer
-      - Useless Gaps
+      # - Useless Gaps #check later if this works in Gnome 50
 
   - type: os-release
     properties:
