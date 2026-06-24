@@ -90,7 +90,7 @@ modules:
         repo:
           name: flathub
           title: Flathub (User)
-          url: https://dl.flathub.org/repo/flathub.flatpakreporepo:
+          url: https://dl.flathub.org/repo/flathub.flatpakrepo
         install: # system flatpaks we want all users to have and not remove
           - app.zen_browser.zen
           - com.github.rafostar.Clapper.Enhancers
