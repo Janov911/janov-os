@@ -17,8 +17,8 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-    - type: fonts
-      fonts:
+  - type: fonts
+    fonts:
       nerd-fonts:
         - FiraCode # don't add spaces or "Nerd Font" suffix
         - Hack
