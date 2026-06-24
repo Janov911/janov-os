@@ -17,6 +17,16 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
+    - type: fonts
+      fonts:
+      nerd-fonts:
+        - FiraCode # don't add spaces or "Nerd Font" suffix
+        - Hack
+        - SourceCodePro
+        - Terminus
+        - JetBrainsMono
+        - NerdFontsSymbolsOnly
+        
   - type: dnf
     repos:
       copr:
@@ -131,5 +141,30 @@ modules:
 #  - type: gnome-extensions
 #    install:
 #      - Bluetooth-Battery-Meter@maniacx.github.com
+  - type: gnome-extensions
+    install:
+      - Blur my Shell
+      - AppIndicator and KStatusNotifierItem Support
+      - Auto Move Windows
+      - Bluetooth Battery Meter
+      - Bluetooth Quick Connect
+      - Caffeine
+      - Dash to Dock
+      - GSConnect
+      - Hot Edge
+      - Just Perfection
+      - Logo Menu
+      - Space Bar
+      - Switcher
+      - Tailscale Status
+      - Tiling Shell
+      - Top Bar Organizer
+      - Useless Gaps
 
+  - type: os-release
+    properties:
+      ID: kpms_build
+      NAME: JanOSBuild
+      PRETTY_NAME: JanOS Image
+      
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
