@@ -134,6 +134,8 @@ modules:
           - org.kde.kdenlive
           - org.nickvision.tubeconverter
           - ca.desrt.dconf-editor
+          - org.wezfurlong.wezterm
+          - org.signal.Signal
      # - scope: user # Also add Flathub user repo, but no user packages
 
 #  - type: gnome-extensions
