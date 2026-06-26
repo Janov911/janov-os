@@ -70,6 +70,7 @@ modules:
         - newsboat
         - nextcloud-client
         - nvtop
+        - ollama
         - pcre
         - podman-compose
         - podman-docker
