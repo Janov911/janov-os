@@ -117,7 +117,6 @@ modules:
           - eu.betterbird.Betterbird
           - im.riot.Riot
           - io.github.fastrizwaan.WineZGUI
-          - io.github.fsobolev.TimeSwitch
           - io.github.giantpinkrobots.flatsweep
           - io.github.lo2dev.Echo
           - io.github.vikdevelop.SaveDesktop
@@ -134,6 +133,7 @@ modules:
           - org.gnome.DejaDup
           - org.kde.kdenlive
           - org.nickvision.tubeconverter
+          - ca.desrt.dconf-editor
      # - scope: user # Also add Flathub user repo, but no user packages
 
 #  - type: gnome-extensions
@@ -159,10 +159,18 @@ modules:
       - Top Bar Organizer
       # - Useless Gaps #check later if this works in Gnome 50
 
+  - type: gschema-overrides
+    include:
+      - zz1-janov-os.gschema.override
+
   - type: os-release
     properties:
       ID: kpms_build
-      NAME: JanOSBuild
-      PRETTY_NAME: JanOS Image
+      NAME: JanOS
+      PRETTY_NAME: Janov's OS
       
+  - type: copy
+    src: files/system/usr/share/backgrounds/
+    dest: /usr/share/backgrounds/
+
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
