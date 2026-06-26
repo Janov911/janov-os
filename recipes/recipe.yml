@@ -176,4 +176,8 @@ modules:
     src: files/system/usr/share/backgrounds/
     dest: /usr/share/backgrounds/
 
+  - type: copy
+    src: files/icons
+    dest: /usr/share/
+
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
