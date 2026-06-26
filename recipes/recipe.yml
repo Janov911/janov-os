@@ -134,8 +134,6 @@ modules:
           - org.gnome.DejaDup
           - org.kde.kdenlive
           - org.nickvision.tubeconverter
-          - org.winehq.Wine.gecko
-          - org.winehq.Wine.mono        
      # - scope: user # Also add Flathub user repo, but no user packages
 
 #  - type: gnome-extensions
