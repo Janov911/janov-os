@@ -17,6 +17,16 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode # don't add spaces or "Nerd Font" suffix
+        - Hack
+        - SourceCodePro
+        - Terminus
+        - JetBrainsMono
+        - NerdFontsSymbolsOnly
+        
   - type: dnf
     repos:
       copr:
@@ -60,6 +70,7 @@ modules:
         - newsboat
         - nextcloud-client
         - nvtop
+        - ollama
         - pcre
         - podman-compose
         - podman-docker
@@ -85,45 +96,88 @@ modules:
 
   - type: default-flatpaks
     configurations:
-      - notify: false # Send notification after install/uninstall is finished (true/false)
-        scope: system
-        # If no repo information is specified, Flathub will be used by default
+      - notify: true # Send notification after install/uninstall is finished (true/false)
+        scope: user
+        repo:
+          name: flathub
+          title: Flathub (User)
+          url: https://dl.flathub.org/repo/flathub.flatpakrepo
         install: # system flatpaks we want all users to have and not remove
-        - app.zen_browser.zen
-        - com.github.rafostar.Clapper.Enhancers
-        - com.github.tchx84.Flatseal
-        - com.github.zocker_160.SyncThingy
-        - com.moonlight_stream.Moonlight
-        - com.nextcloud.desktopclient.nextcloud
-        - com.play0ad.zeroad
-        - com.protonvpn.www
-        - com.shatteredpixel.shatteredpixeldungeon
-        - com.thincast.client
-        - com.valvesoftware.SteamLink
-        - dev.geopjr.Tuba
-        - dev.ibrahimcetin.reins
-        - eu.betterbird.Betterbird
-        - im.riot.Riot
-        - io.github.fastrizwaan.WineZGUI
-        - io.github.fsobolev.TimeSwitch
-        - io.github.giantpinkrobots.flatsweep
-        - io.github.lo2dev.Echo
-        - io.github.vikdevelop.SaveDesktop
-        - io.gitlab.news_flash.NewsFlash
-        - io.mrarm.mcpelauncher
-        - it.mijorus.collector
-        - it.mijorus.gearlever
-        - net.davidotek.pupgui2
-        - net.lutris.Lutris
-        - net.newpipe.NewPipe
-        - net.openra.OpenRA
-        - net.retrodeck.retrodeck
-        - org.gnome.Boxes
-        - org.gnome.DejaDup
-        - org.kde.kdenlive
-        - org.nickvision.tubeconverter
-        - org.winehq.Wine.gecko
-        - org.winehq.Wine.mono        
+          - app.zen_browser.zen
+          - com.github.rafostar.Clapper.Enhancers
+          - com.github.tchx84.Flatseal
+          - com.github.zocker_160.SyncThingy
+          - com.moonlight_stream.Moonlight
+          - com.play0ad.zeroad
+          - com.protonvpn.www
+          - com.shatteredpixel.shatteredpixeldungeon
+          - com.thincast.client
+          - com.valvesoftware.SteamLink
+          - dev.geopjr.Tuba
+          - dev.ibrahimcetin.reins
+          - eu.betterbird.Betterbird
+          - im.riot.Riot
+          - io.github.fastrizwaan.WineZGUI
+          - io.github.giantpinkrobots.flatsweep
+          - io.github.lo2dev.Echo
+          - io.github.vikdevelop.SaveDesktop
+          - io.gitlab.news_flash.NewsFlash
+          - io.mrarm.mcpelauncher
+          - it.mijorus.collector
+          - it.mijorus.gearlever
+          - net.davidotek.pupgui2
+          - net.lutris.Lutris
+          - net.newpipe.NewPipe
+          - net.openra.OpenRA
+          - net.retrodeck.retrodeck
+          - org.gnome.Boxes
+          - org.gnome.DejaDup
+          - org.kde.kdenlive
+          - org.nickvision.tubeconverter
+          - ca.desrt.dconf-editor
+          - org.wezfurlong.wezterm
+          - org.signal.Signal
      # - scope: user # Also add Flathub user repo, but no user packages
+
+#  - type: gnome-extensions
+#    install:
+#      - Bluetooth-Battery-Meter@maniacx.github.com
+  - type: gnome-extensions
+    install:
+      - Blur my Shell
+      - AppIndicator and KStatusNotifierItem Support
+      - Auto Move Windows
+      - Bluetooth Battery Meter
+      - Bluetooth Quick Connect
+      - Caffeine
+      - Dash to Dock
+      - GSConnect
+      - Hot Edge
+      - Just Perfection
+      - Logo Menu
+      - Space Bar
+      - Switcher
+      - Tailscale Status
+      - Tiling Shell
+      - Top Bar Organizer
+      # - Useless Gaps #check later if this works in Gnome 50
+
+  - type: gschema-overrides
+    include:
+      - zz1-janov-os.gschema.override
+
+  - type: os-release
+    properties:
+      ID: kpms_build
+      NAME: JanOS
+      PRETTY_NAME: Janov's OS
+      
+  - type: copy
+    src: files/system/usr/share/backgrounds/
+    dest: /usr/share/backgrounds/
+
+  - type: copy
+    src: files/icons
+    dest: /usr/share/
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
